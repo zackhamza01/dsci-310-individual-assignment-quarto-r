@@ -50,11 +50,13 @@ to further support this hypothesis.
 
 Suppose we were interested in looking in more closely at the province 
 with the highest spread (in terms of standard deviation) of horse populations. 
-We present the standard deviations in Table 1.
+We present the standard deviations in @tbl-horses-pop-sd.
 
-Table 1. Standard deviation of historical (1906-1972) horse populations for each Canadian province.
 
 ```{r}
+#| label: tbl-horses-pop-sd
+#| tbl-cap: Standard deviation of historical (1906-1972) horse populations for each Canadian province.
+
 horses_sd_table <- read_csv("../results/horses_sd.csv")
 largest_sd <- horses_sd_table$Province[1]
 knitr::kable(horses_sd_table)
@@ -64,7 +66,7 @@ Note that we define standard deviation (of a sample) as
 
 $$s = \sqrt{\frac{\sum_{i=1}^N (x_i - \overline{x})^2}{N-1} }$$
 
-Additionally, note that in Table 1 we consider the sample standard deviation of the number of horses during the same time span as Figure 1.
+Additionally, note that in @tbl-horses-pop-sd we consider the sample standard deviation of the number of horses during the same time span as @fig-horse-pops.
 
 ![Horse populations for the province with the largest standard deviation](../results/horse_pop_plot_largest_sd.png){#fig-largest-sd width=70%}
 
