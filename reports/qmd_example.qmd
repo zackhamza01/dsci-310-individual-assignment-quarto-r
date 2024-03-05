@@ -12,6 +12,8 @@ format:
         embed-resources: true
 bibliography: references.bib 
 editor: source
+execute: 
+    output: false
 ---
 
 
@@ -56,6 +58,7 @@ We present the standard deviations in @tbl-horses-pop-sd.
 ```{r}
 #| label: tbl-horses-pop-sd
 #| tbl-cap: Standard deviation of historical (1906-1972) horse populations for each Canadian province.
+#| output: true
 
 horses_sd_table <- read_csv("../results/horses_sd.csv")
 largest_sd <- horses_sd_table$Province[1]
